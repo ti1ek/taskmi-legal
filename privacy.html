@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<title>Privacy Policy — Taskmi</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    max-width: 760px; margin: 0 auto; padding: 32px 20px 80px; color: #1c1c1e; background: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) { body { color: #e6e6e6; background: #0f0f10; } a { color: #4ea1ff; } }
+  h1 { font-size: 28px; margin: 0 0 4px; }
+  h2 { font-size: 19px; margin: 34px 0 8px; }
+  .meta { color: #888; font-size: 14px; margin-bottom: 8px; }
+  .lead { background: rgba(127,127,127,.08); border-radius: 12px; padding: 14px 16px; font-size: 15px; }
+  .langs { font-size: 14px; color: #888; }
+  ul { padding-left: 22px; }
+  li { margin: 4px 0; }
+  a { color: #0a66ff; }
+  footer { margin-top: 48px; font-size: 13px; color: #888; border-top: 1px solid rgba(127,127,127,.2); padding-top: 16px; }
+</style>
+</head>
+<body>
+
+<p class="langs">English &middot; <a href="ru/privacy.html">Русский</a> &middot; <a href="es/privacy.html">Español</a></p>
+
+<h1>Privacy Policy</h1>
+<p class="meta">App: Taskmi · Data controller: Tilek Koszhanov (individual developer) · Last updated: 3 October 2026</p>
+<p class="lead">Taskmi is a task tracker for you and the people you share spaces with. To keep your tasks in sync across devices and with other members, Taskmi needs an account and stores your tasks on our servers. We do not sell your data, we do not show ads, and we do not include analytics SDKs or tracking. This policy explains what the App processes, why, who can see it and who it is shared with. It applies to the Taskmi iPhone app, its Lock Screen widgets and Live Activities, and the invitation page on the web.</p>
+<h2>1. Who we are</h2>
+<p>The App is provided by Tilek Koszhanov, an individual developer ("we", "us"). For any privacy question or request, contact <a href="mailto:koszhanov.tilek@icloud.com">koszhanov.tilek@icloud.com</a>.</p>
+<h2>2. What we process, and why</h2>
+<ul>
+  <li><strong>Account data</strong> — a user ID created when you sign in with Apple, and the email address Apple shares with us (this can be a private relay address if you choose "Hide My Email"). Used to sign you in and keep your data tied to your account. Stored on our servers until you delete your account.</li>
+  <li><strong>Profile</strong> — the display name you enter and, if you add one, your profile photo. Used to show you to members of the spaces you join. Stored on our servers until you change it or delete your account.</li>
+  <li><strong>Tasks</strong> — the title, deadline, who created the task, who it is assigned to, which space it belongs to, and when it was viewed or completed. Used to run the task list, shared spaces and reminders. Stored on our servers until the task or your account is deleted.</li>
+  <li><strong>Spaces</strong> — the space name, emoji, colour, picture, the list of members and their roles (admin or member), and invitation codes. Used to share tasks with other people. Stored on our servers until the space is deleted.</li>
+  <li><strong>Voice recordings</strong> — the short audio clip you record when you speak a task. Used to turn your speech into text. Processed in transit only and not stored by us.</li>
+  <li><strong>Text you submit for AI processing</strong> — the text you type or dictate to create tasks, plus a compact context: the names of your spaces and their members, your time zone, the current date and your language. Used to split the text into task drafts with a deadline, space and assignee. Processed in transit only and not stored by us.</li>
+  <li><strong>Device tokens</strong> — the push notification token of your iPhone and, if you turn on Live Activities, the Live Activity tokens. Used to deliver notifications and update the deadline timer on your Lock Screen. Stored on our servers while notifications are enabled or until you delete your account.</li>
+  <li><strong>Subscription data</strong> — your Pro status, plan, expiry date and the RevenueCat app user ID (equal to your Taskmi user ID). Used to unlock Taskmi Pro. Stored on our servers and by RevenueCat.</li>
+  <li><strong>Usage counters</strong> — a daily count of AI requests per account. Used to enforce fair daily limits and prevent abuse. Stored on our servers.</li>
+  <li><strong>App settings</strong> — your language, appearance, notification and calendar preferences, and your AI consent. Used to make the App work the way you set it up. Stored only on your device.</li>
+</ul>
+<p>We do not collect your contacts, precise location, browsing history, advertising identifier, health data or payment card details.</p>
+<h2>3. Who can see your data inside Taskmi</h2>
+<ul>
+  <li><strong>Personal tasks</strong> (not in any space) are visible only to you.</li>
+  <li><strong>In a space</strong>, every member can see the space name, emoji and picture, the names and profile photos of the other members, and the tasks in that space, including who created them, who they are assigned to and whether they are done.</li>
+  <li><strong>Your profile name and photo</strong> are visible to people who share at least one space with you.</li>
+  <li><strong>Invitation links</strong> show the name of the person who invited you, the space name and its emoji to anyone who opens the link while it is valid. Share invitation links only with people you want to invite; an admin can revoke a link at any time.</li>
+  <li><strong>Notifications and Live Activities</strong> may show task titles, names and space names on your Lock Screen, where people near your phone can see them. You can turn these off in iOS Settings.</li>
+</ul>
+<p>Server access rules limit every request to the data the signed-in member is allowed to see. Profile and space pictures are stored in private storage and are available only to the people described above.</p>
+<h2>4. How AI processing works (data flow)</h2>
+<p>AI features are part of Taskmi Pro and run only after you give consent in the App. When you dictate a task, the audio clip is sent over an encrypted (HTTPS) connection to our processing service (Supabase Edge Functions), which forwards it to <strong>OpenAI</strong> for speech-to-text. When you ask Taskmi to understand typed or dictated text, our service sends that text and the compact context described in Section 2 to <strong>OpenAI</strong>, which returns structured task drafts. The drafts appear on a review screen, and nothing is saved until you confirm it.</p>
+<p>Your audio and text pass through our service to produce the result and are not stored by us afterwards. OpenAI processes them under its API terms and privacy policy. As of the date above, OpenAI states that data submitted through its API is not used to train its models by default. We do not control this third party; see <a href="https://openai.com/policies/privacy-policy/">openai.com/policies/privacy-policy</a>.</p>
+<p>You can always create and edit tasks by hand without using AI features.</p>
+<h2>5. Permissions</h2>
+<p>iOS asks for your permission before Taskmi can use each of these features. You can change your choice at any time in iOS Settings.</p>
+<ul>
+  <li><strong>Notifications</strong> — reminders before a deadline (7 days, 24, 12, 3 and 1 hour before) are scheduled locally on your iPhone. Push notifications about actions by other members, such as a task assigned to you or completed, are sent through Apple Push Notification service.</li>
+  <li><strong>Microphone</strong> — used only while you are recording a task. Taskmi does not listen in the background.</li>
+  <li><strong>Calendar</strong> — if you turn on calendar export, Taskmi adds your active tasks to a separate "Taskmi" calendar (or your default calendar when your account does not allow new calendars). Taskmi changes only the events it created and does not send your other calendar events to us. If your calendar is synced through iCloud or another account, that provider stores the exported events.</li>
+  <li><strong>Camera and Photos</strong> — used only when you choose a profile photo or a space picture. Only the photo you pick is uploaded, after being resized on your device.</li>
+  <li><strong>Live Activities</strong> — show the deadline timer for your nearest task on the Lock Screen and in the Dynamic Island.</li>
+</ul>
+<h2>6. Reminders are a convenience</h2>
+<p>Local reminders depend on iOS, your notification settings, Focus modes and how recently you opened the App. Do not rely on Taskmi as the only way to be alerted about something time-critical.</p>
+<h2>7. Subscriptions and payments</h2>
+<p>Purchases are processed by <strong>Apple</strong>; we never receive your card or payment details. Subscription status is managed through <strong>RevenueCat</strong>, which processes your app user ID and purchase details to tell the App whether Taskmi Pro is active. See <a href="https://www.revenuecat.com/privacy/">RevenueCat's privacy policy</a> and <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>.</p>
+<h2>8. Who we share data with</h2>
+<p>We share data only with the service providers needed to run the App:</p>
+<ul>
+  <li><strong>Supabase</strong> — database, sign-in, file storage, realtime updates and serverless functions.</li>
+  <li><strong>OpenAI</strong> — speech-to-text and turning text into task drafts (Pro AI features only).</li>
+  <li><strong>Apple</strong> — Sign in with Apple, push notifications, Live Activities and in-app purchases.</li>
+  <li><strong>RevenueCat</strong> — subscription management.</li>
+  <li><strong>Vercel</strong> — hosting of the invitation web page.</li>
+</ul>
+<p>We do <strong>not sell</strong> personal data and do not share it for advertising. We may disclose data if required by law or to protect our rights, our users or the public.</p>
+<h2>9. International transfers</h2>
+<p>Our providers may process data on servers located outside your country, including in the United States and the European Union. Where required, such transfers rely on appropriate safeguards, such as the providers' standard contractual clauses.</p>
+<h2>10. Retention</h2>
+<p>We keep your account data, profile, spaces and tasks for as long as your account exists. Deleted tasks are removed from our database. We do not keep your voice recordings or the text sent for AI processing after producing a result. Abuse-protection records for invitation links contain only a hashed network address and are removed regularly. Settings stored on your device remain until you change them or delete the App. Apple and RevenueCat keep purchase records under their own policies.</p>
+<h2>11. Deleting your account</h2>
+<p>You can ask us to delete your account at any time by writing to <a href="mailto:koszhanov.tilek@icloud.com">koszhanov.tilek@icloud.com</a> from the email linked to your account, or by using account deletion in the App when it is available. We delete your account, profile, photo, device tokens and personal tasks within 30 days. Spaces where you are the only member are deleted; in shared spaces, tasks you created for other members may remain so their lists keep working, without your profile. Deleting your account does not cancel an App Store subscription: cancel it in your Apple ID settings.</p>
+<h2>12. Legal bases (EEA/UK users)</h2>
+<p>Where the GDPR or UK GDPR applies, we process data to <strong>perform our contract</strong> with you (running your account, tasks, spaces, reminders and subscription), based on your <strong>consent</strong> for AI processing and for permissions such as notifications, microphone and calendar (which you can withdraw at any time in the App or in iOS Settings), and based on our <strong>legitimate interests</strong> in keeping the service secure and reliable and preventing abuse.</p>
+<h2>13. Your rights</h2>
+<p>Depending on where you live, you may have rights to access, correct, export or delete your personal data, to restrict or object to processing, to withdraw consent, and to lodge a complaint with a supervisory authority. You can correct your name and photo in the App at any time. For other requests, contact us at the email above and we will respond as required by law. California residents: we do not "sell" or "share" personal information as defined by the CCPA/CPRA.</p>
+<h2>14. Security</h2>
+<p>Data in transit is protected with encryption (HTTPS/TLS). Access to your data on our servers is restricted by row-level security rules, photos are kept in private storage, and server keys (including the OpenAI key) stay on our servers and are never shipped in the App. No method of transmission or storage is completely secure, so we cannot guarantee absolute security.</p>
+<h2>15. Children</h2>
+<p>The App is not directed to children under 13 (or the higher minimum age in your country), and we do not knowingly collect data from them. If you believe a child has provided us data, contact us and we will delete it.</p>
+<h2>16. Changes to this policy</h2>
+<p>We may update this policy from time to time. The "Last updated" date shows the current version, and material changes will be shown in the App or on this page.</p>
+<h2>17. Contact</h2>
+<p>Tilek Koszhanov — <a href="mailto:koszhanov.tilek@icloud.com">koszhanov.tilek@icloud.com</a></p>
+
+<footer>
+  <p><a href="terms.html">Terms of Use</a> &middot; <a href="index.html">Home</a></p>
+  <p>&copy; 2026 Tilek Koszhanov. Taskmi.</p>
+</footer>
+
+</body>
+</html>
